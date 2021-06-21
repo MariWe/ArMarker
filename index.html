@@ -11,10 +11,13 @@
   <body style='margin : 0px; overflow: hidden;'>
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-      
+      <a-assets>
+        <a-asset-item id="magnemite" src="https://github.com/MariWe/ArMarker/blob/main/assets/magnemite/scene.gltf"></a-asset-item>
+      </a-assets>
+                     
     <a-marker type='barcode' value='1'>
           <a-entity
-            obj-model=" obj: url(/ArMarker/assets/Fisch/Skulptur.obj); mtl: url(/ArMarker/assets/Fisch/Texturemap.mtl);"
+            gltf-model="#magnemite"
             scale="1">
         </a-entity>
     </a-marker>
