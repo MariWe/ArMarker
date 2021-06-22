@@ -13,21 +13,44 @@
     <a-scene embedded vr-mode-ui="enabled: false" arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
     <a-marker type='barcode' value='1'>
-        <a-sphere position='0 0 0' color="red" scale="0.5 0.5 0.5"></a-box>
+        <a-sphere   radius= "0.8"
+                    material="color: crimson; metalness: 0.7"     
+                    sound="src: https://raw.githubusercontent.com/MariWe/ArMarker/main/Music/Neverpain.mp3"
+        ></a-sphere>
     </a-marker>
 
     <a-marker id="animated-marker" type='barcode' value='2'>
         <a-entity
             obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Fisch/Skulptur.obj); 
                        mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Fisch/Texturemap.mtl)"
-            scale="2 2 2"
-            position="-2 0 0"
+            scale="0.5 0.5 0.5"
+            position="0 -0.5 0"
             >
         </a-entity>
     </a-marker>
 
-    <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+    <a-marker id="animated-marker" type='barcode' value='3'>
+        <a-entity
+            obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Spielhaus/Skulptur.obj); 
+                       mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Spielhaus/Texturemap.mtl)"
+            scale="0.5 0.5 0.5"
+            position="0 -0.5 0"
+            >
+        </a-entity>
+    </a-marker>
+
+    <a-marker id="animated-marker" type='barcode' value='4'>
+        <a-entity
+            obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Pony/Skulptur.obj); 
+                       mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Pony/Texturemap.mtl)"
+            scale="0.5 0.5 0.5"
+            position="0 -0.5 0"
+            >
+        </a-entity>
+    </a-marker>
+
     <a-entity camera></a-entity>
     </a-scene>
 </body>
+</html>
 </html>
