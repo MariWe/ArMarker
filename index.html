@@ -14,11 +14,15 @@
     <a-scene embedded gesture-detector vr-mode-ui="enabled: false" arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
     <a-marker type='barcode' value='1'  raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-        <a-sphere   radius= "0.6"
+       <!-- <a-sphere   radius= "0.6"
                     material="color: crimson; metalness: 0.7"     
                     class="clickable"
                     gesture-handler
-        ></a-sphere>
+        ></a-sphere>-->
+      <a-enity
+               gltf-model="url(https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pfeil.gltf)"
+               scale="1 1 1">
+        </a-enity>
     </a-marker>
 
     <a-marker id="animated-marker" type='barcode' value='2'  raycaster="objects: .clickable" emitevents="true"  cursor="fuse: false; rayOrigin: mouse;">
