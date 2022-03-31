@@ -13,7 +13,7 @@
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
     <a-scene embedded gesture-detector vr-mode-ui="enabled: false" arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-    <a-marker id="animated-marker" type="hiro" raycaster="objects: .clickable" emitevents="false"  cursor="fuse: false; rayOrigin: mouse;">
+    <a-marker id="animated-marker" type="barcode" value="2" raycaster="objects: .clickable" emitevents="false"  cursor="fuse: false; rayOrigin: mouse;">
         <a-gltf-model
             src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/fisch.glb"
             scale="2 2 2"
