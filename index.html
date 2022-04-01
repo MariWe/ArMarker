@@ -1,32 +1,53 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Skulpturen der Kunstsammlungen Chemnitz</title>
+    <title>Fisch</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"> </script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
   </head>
-
+  
   <body style='margin : 0px; overflow: hidden;'>
+  <script>
+        AFRAME.registerComponent('markerhandler', {
+          init: function () {
+            this.el.sceneEl.addEventListener('markerFound', () => {
+              alert("Marker was found!");
+            })
+          }
+        });
+      </script>
+    
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
     <a-scene embedded gesture-detector vr-mode-ui="enabled: false" arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-    <a-marker id="animated-marker" type='barcode' value='2'  emitevents="true"  cursor="rayOrigin: mouse">
+    <a-marker 
+    id="animated-marker" 
+    type='barcode' 
+    value='2'  
+    emitevents="true"  
+    cursor="fuse: false; rayOrigin: mouse;" 
+    smooth="true" 
+    smoothCount="15" 
+    smoothTolerance="0.01" 
+    smoothThreshold="5" 
+    raycaster="objects: .clickable">
         <a-entity
             obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Fisch/Skulptur.obj); 
                        mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Fisch/Texturemap.mtl)"
             scale="1 1 1"
             position="0 -1 0"
-            rotation="0 0 0"
             class="clickable"
-            gesture-handler
+            gesture-handler="minScale: 0.5; maxScale: 5"
             >
         </a-entity>
     </a-marker>
 
     <a-entity camera></a-entity>
     </a-scene>
+
 </body>
 </html>
