@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
   </head>
+<<<<<<< HEAD
   <script>
         AFRAME.registerComponent('markerhandler', {
           init: function () {
@@ -17,6 +18,8 @@
           }
         });
       </script>
+=======
+>>>>>>> 025f2f315fd6f00ff8d1e0579747939fb3259043
   <body style='margin : 0px; overflow: hidden;'>
     
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
@@ -34,12 +37,64 @@
     smoothThreshold="5" 
     raycaster="objects: .clickable">
         <a-entity
+<<<<<<< HEAD
             obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Fisch/Skulptur.obj); 
                        mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Fisch/Texturemap.mtl)"
+=======
+            obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Elefant/Fisch/Skulptur.obj); 
+                       mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Elefant/Fisch/Texturemap.mtl)"
+>>>>>>> 025f2f315fd6f00ff8d1e0579747939fb3259043
             scale="1 1 1"
             position="0 -1 0"
             class="clickable"
             gesture-handler="minScale: 0.5; maxScale: 5"
+<<<<<<< HEAD
+=======
+            >
+        </a-entity>
+    </a-marker>
+      
+       <a-marker 
+    id="animated-marker" 
+    type='barcode' 
+    value='4'  
+    emitevents="true"  
+    cursor="fuse: false; rayOrigin: mouse;" 
+    smooth="true" 
+    smoothCount="15" 
+    smoothTolerance="0.01" 
+    smoothThreshold="5" 
+    raycaster="objects: .clickable">
+        <a-entity
+            obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Elefant/Pony/Skulptur.obj); 
+                       mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Elefant/Pony/Texturemap.mtl)"
+            scale="1 1 1"
+            position="0 -1 0"
+            class="clickable"
+            gesture-handler="minScale: 0.5; maxScale: 5"
+            >
+        </a-entity>
+    </a-marker>
+      
+       <a-marker 
+    id="animated-marker" 
+    type='barcode' 
+    value='7'  
+    emitevents="true"  
+    cursor="fuse: false; rayOrigin: mouse;" 
+    smooth="true" 
+    smoothCount="15" 
+    smoothTolerance="0.01" 
+    smoothThreshold="5" 
+    raycaster="objects: .clickable">
+        <a-entity
+            obj-model="obj: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Elefant/Spielhaus/Skulptur.obj); 
+                       mtl: url(https://raw.githubusercontent.com/MariWe/ArMarker/main/assets/Elefant/Spielhaus/Texturemap.mtl)"
+            scale="1 1 1"
+            position="0 -1 0"
+            class="clickable"
+            gesture-handler="minScale: 0.5; maxScale: 5"
+>>>>>>> 025f2f315fd6f00ff8d1e0579747939fb3259043
             >
         </a-entity>
     </a-marker>
